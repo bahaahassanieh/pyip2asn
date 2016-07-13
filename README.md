@@ -12,5 +12,16 @@ You need internet conenction to be able to use `pyip2asn`
 
 # Example
 
+``` 
+In [1]:import pyip2asn
+
+In [2]:# Generate ASN Description Dictionary in order to speed up the IPv4 to ASN lookup.
+In [3]: asn_dict = pyip2asn.get_asn_dictionary()
+
+In [4]: pyip2asn.ip2asn("8.8.8.8",asn_dict)
+Out[4]: (15169, u'GOOGLE - Google Inc.')
+
+```
+
 
 
