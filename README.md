@@ -25,7 +25,7 @@ Out[4]: (15169, u'GOOGLE - Google Inc.')
 
 ## Foot Note:
 
-I've discovered another python module that uses GeoIPLite database maps ip addresses/host names to (AS Numbers, AS Decriptions) after I wrote the `pyip2asn` 
+I've discovered another python module that uses GeoIPLite database to map ip addresses/host names to (AS Numbers, AS Decriptions) after I wrote the `pyip2asn` 
 
 quoring from that library:
 ```
