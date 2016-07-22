@@ -1,14 +1,15 @@
 # Introduction
 
-### Warning: This module is in a very early development stage as of 13/07/2016. It may have few bugs.
+### Warning: This module is in early development stage as of 13/07/2016. It may have few bugs.
 
-`pyip2asn` is a python module takes a IPv4 address and returns Autonomous System Number (ASN) and AS Description.
+`pyip2asn` is a python module that takes an IPv4 address as an argument and returns Autonomous System Number (ASN) and AS Description as a python tuple.
 
-Under the hood it uses cymru ip to asn database to map `IPv4` addresses to AS Numbers. Cymru database is queried via DNS and reposne is parsed.
+Under the hood it uses Cymru ip to asn database to map `IPv4` addresses to AS Numbers. Cymru database is queried via DNS and reponse is parsed.
 
-AS Description is scraped from http://www.bgplookingglass.com web page and then combined with the DNS result from Cymru database. 
+AS Description is scraped from http://www.bgplookingglass.com and then AS description is combined with the DNS result from Cymru database. 
 
-You need internet conenction to be able to use `pyip2asn`
+You need internet connection to be able to use `pyip2asn`
+
 
 # Example
 
@@ -33,4 +34,11 @@ quoring from that library:
 >>> gi.org_by_name('cnn.com')
 'AS5662 Turner Broadcasting'
 ```
+or
 
+```
+>>> gi.org_by_addr("90.223.167.43")
+u'AS5607 BSKYB-BROADBAND-AS'
+```
+-`pygeoip` allows AS mapping both based on IPv4 and domain name. `pyip2asn` only does for IPv4 address for teh time being. 
+-`pygeiop` requires GeoIP ASN database to be downloaded, `pyip2asn` do not necessarily need some library to be downloaded. (however it is much slower if not downloaded)
