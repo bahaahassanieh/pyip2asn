@@ -19,7 +19,7 @@ def get_asn_dictionary(verbose = False):
             print("--------------------------")
             print("")
         r = requests.get(asn_page)
-        soup = BeautifulSoup(r.text)
+        soup = BeautifulSoup(r.text, 'html.parser')
         table = soup.find("pre")
         lst = table.find_all(text=True)
         for asn in lst:
